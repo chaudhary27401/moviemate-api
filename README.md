@@ -42,27 +42,27 @@ Tested thoroughly with **Postman** for API validation.
    git clone https://github.com/your-username/moviemate.git
    cd moviemate
 2. Create and activate a virtual environment:
-
-  python -m venv venv
-  source venv/bin/activate   # Linux/Mac
-  venv\Scripts\activate      # Windows
-
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
 
 3. Install dependencies:
+     ```bash
+  
+    pip install -r requirements.txt
 
-  pip install -r requirements.txt
 
-
-4. Apply migrations:
-
-  python manage.py migrate
+5. Apply migrations:
+    ```bash
+    python manage.py migrate
 
 
 5. (Optional) Seed the database with users/movies/reviews:
-
-  python manage.py seed_data
+    ```bash
+    python manage.py seed_data
 
 
 6. Run server:
-
-  python manage.py runserver
+    ```bash
+    python manage.py runserver
