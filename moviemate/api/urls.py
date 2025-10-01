@@ -1,8 +1,12 @@
 # from django import urls
 from django.urls import path
 from moviemate.api.views import WatchDetailAV,WatchListAV,StreamPlatformListAV,StreamPlatformDetailAV,ReviewList,ReviewDetail, ReviewCreate,UserReview,WatchListFilter
+from django.http import JsonResponse
 
+def home(request):
+    return JsonResponse({"message": "MovieMate API is running!"})
 urlpatterns = [
+    path("", home),
     path("list/", WatchListAV.as_view(), name = "watch-list"),
     path("<int:pk>", WatchDetailAV.as_view(),name = "watch-detail"),
     path("stream/",StreamPlatformListAV.as_view(), name = 'streamplatform-list' ),
