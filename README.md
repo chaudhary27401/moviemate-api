@@ -41,3 +41,28 @@ Tested thoroughly with **Postman** for API validation.
    ```bash
    git clone https://github.com/your-username/moviemate.git
    cd moviemate
+2. Create and activate a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
+
+3. Install dependencies:
+     ```bash
+  
+    pip install -r requirements.txt
+
+
+5. Apply migrations:
+    ```bash
+    python manage.py migrate
+
+
+5. (Optional) Seed the database with users/movies/reviews:
+    ```bash
+    python manage.py seed_data
+
+
+6. Run server:
+    ```bash
+    python manage.py runserver
